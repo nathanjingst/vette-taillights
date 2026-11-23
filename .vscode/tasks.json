@@ -1,0 +1,41 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "ESP32: Serial Monitor",
+            "type": "shell",
+            "command": "mpremote",
+            "args": [
+                "connect",
+                "COM3",
+                "repl"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "ESP32: Upload Main",
+            "type": "shell",
+            "command": "mpremote",
+            "args": [
+                "connect",
+                "COM3",
+                "fs",
+                "cp",
+                "${workspaceFolder}/src/main.py",
+                ":main.py"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "ESP32: Reset",
+            "type": "shell",
+            "command": "mpremote",
+            "args": [
+                "connect",
+                "COM3",
+                "reset"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}
